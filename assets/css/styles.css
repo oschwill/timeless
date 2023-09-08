@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Inter;
+  src: url("../fonts/Inter-VariableFont_slntwght.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+/* ! BG COLORS */
+/* ! FONT COLORS */
+/* ARROW */
+.arrow, main .news-section article:last-of-type p:last-of-type::after, main .showroom-section article .section-wrapper .showroom-text p:last-of-type::after, main .story-section article:last-of-type div p::after {
+  content: "→";
+  padding-left: 15px;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+.h2-section, main .news-section h2, main .partnership-section article:first-of-type h2, main .handmade-jewels-section article:first-of-type h2 {
+  font-weight: 100;
+  font-size: 3.3rem;
+  letter-spacing: 10px;
+  font-weight: 100;
+  padding: 50px 0 38px 0;
+}
+
+body {
+  color: #fff;
+}
+
+header .head-intro {
+  background: url("../imgs/header-background.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+header .head-intro .head-intro-logo {
+  padding: 100px 0 0 38.5px;
+}
+
+main {
+  /* STORY SECTION */
+  /*HANDMADE SECTION*/
+  /* PARTNERSHIP SECTION */
+}
+main .story-section {
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .story-section article:first-of-type p {
+  font-size: 1.32rem;
+  text-align: center;
+  letter-spacing: 5px;
+  font-weight: 100;
+  padding: 52.74px 0 150px 0;
+}
+main .story-section article:last-of-type {
+  position: relative;
+}
+main .story-section article:last-of-type h2 {
+  position: relative;
+  font-size: 3.3rem;
+  font-weight: 100;
+  text-align: center;
+  letter-spacing: 10px;
+  margin-bottom: -125px;
+  z-index: 10;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #fff;
+}
+main .story-section article:last-of-type div img {
+  max-height: 372.99px;
+  margin: 0 25vw;
+}
+main .story-section article:last-of-type div p {
+  font-family: Helvetica, "Times New Roman", Times, serif;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 10px 0 204px 0;
+}
+main .handmade-jewels-section {
+  background-color: #121212;
+}
+main .handmade-jewels-section article {
+  margin: 0 10vw;
+}
+main .handmade-jewels-section article:first-of-type {
+  text-align: center;
+  padding-bottom: 131px;
+}
+main .handmade-jewels-section article:first-of-type p {
+  font-family: Helvetica, "Times New Roman", Times, serif;
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+}
+main .handmade-jewels-section article:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 303px;
+}
+main .handmade-jewels-section article:last-of-type > div img {
+  max-height: 229.49px;
+}
+main .handmade-jewels-section article:last-of-type .center-image {
+  margin-top: -75px;
+}
+main .partnership-section {
+  background-color: #1a1a1a;
+}
+main .partnership-section article:first-of-type {
+  margin: 0 25vw;
+  text-align: center;
+}
+main .partnership-section article:first-of-type p {
+  font-weight: 100;
+  font-size: 1.6rem;
+  font-family: Helvetica, "Times New Roman", Times, serif;
+  padding-bottom: 76px;
+}
+main .partnership-section article:last-of-type {
+  font-weight: 100;
+  padding-bottom: 230px;
+}
+main .partnership-section article:last-of-type div {
+  overflow: hidden;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+main .partnership-section article:last-of-type div p {
+  font-size: 3.9rem;
+}
+main .showroom-section {
+  background-color: #121212;
+  height: 898.47px;
+}
+main .showroom-section article {
+  padding-top: 20vh;
+}
+main .showroom-section article .section-wrapper {
+  margin: 0 10vw;
+  background: url("../imgs/Showroom-bg.jpg") no-repeat;
+  background-size: cover;
+  height: 582.98px;
+  display: flex;
+  justify-content: flex-end;
+}
+main .showroom-section article .section-wrapper .showroom-text {
+  text-align: center;
+  padding-top: 100px;
+  margin-right: -115px;
+}
+main .showroom-section article .section-wrapper .showroom-text h2 {
+  font-weight: 100;
+  font-size: 5.5rem;
+  letter-spacing: 50px;
+  padding-bottom: 47px;
+}
+main .showroom-section article .section-wrapper .showroom-text p {
+  font-size: 1.6rem;
+  padding-bottom: 20px;
+  width: 35%;
+  margin: 0 60%;
+}
+main .news-section {
+  background-color: #1a1a1a;
+}
+main .news-section h2 {
+  text-align: center;
+}
+main .news-section article:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+main .news-section article:first-of-type > div img {
+  max-height: 189px;
+  width: 100%;
+}
+main .news-section article:first-of-type div {
+  width: 33%;
+}
+main .news-section article:first-of-type div:nth-child(2) {
+  align-items: flex-start;
+}
+main .news-section article:first-of-type div:nth-child(2) h2 {
+  font-size: 3rem;
+  padding: 0;
+}
+main .news-section article:last-of-type {
+  text-align: center;
+  padding: 10px;
+}
+main .news-section article:last-of-type p {
+  font-size: 1.6rem;
+}
+main .news-section article:last-of-type p:first-of-type {
+  width: 50%;
+  margin: 0 auto;
+  font-weight: 100;
+  padding-bottom: 38px;
+}
+main .news-section article:last-of-type p:last-of-type {
+  padding-bottom: 150px;
+}
+footer .footer-section {
+  background-color: #e2e2e2;
+}
+footer .footer-section h2 {
+  text-align: center;
+  font-weight: 100;
+  color: #fff;
+  font-size: 5rem;
+  letter-spacing: 50px;
+  padding-top: 50px;
+}
+footer .footer-section article {
+  padding: 0 5vw 10vh 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-section article .left-footer-text a {
+  color: #000;
+  text-decoration: none;
+  padding-right: 10px;
+}
+footer .footer-section article .right-footer-icons img {
+  padding-left: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */

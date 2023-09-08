@@ -1,0 +1,17 @@
+body {
+  color: $font-color-white;
+}
+
+header {
+  .head-intro {
+    background: url('../imgs/header-background.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    .head-intro-logo {
+      padding: 100px 0 0 38.5px;
+    }
+  }
+}

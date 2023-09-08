@@ -1,0 +1,264 @@
+main {
+  /* STORY SECTION */
+  .story-section {
+    background-color: $bg-color-primary;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    article {
+      &:first-of-type {
+        p {
+          font-size: 1.32rem;
+          text-align: center;
+          letter-spacing: 5px;
+          font-weight: 100;
+          padding: 52.74px 0 150px 0;
+        }
+      }
+
+      &:last-of-type {
+        position: relative;
+
+        h2 {
+          position: relative;
+          font-size: 3.3rem;
+          font-weight: 100;
+          text-align: center;
+          letter-spacing: 10px;
+          margin-bottom: -125px;
+          z-index: 10;
+          padding-bottom: 40px;
+          border-bottom: 1px solid $font-color-white;
+        }
+
+        div {
+          img {
+            max-height: 372.99px;
+            margin: 0 25vw;
+          }
+
+          p {
+            font-family: Helvetica, 'Times New Roman', Times, serif;
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 10px 0 204px 0;
+
+            &::after {
+              @extend .arrow;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*HANDMADE SECTION*/
+  .handmade-jewels-section {
+    background-color: $bg-color-secondary;
+
+    article {
+      margin: 0 10vw;
+
+      &:first-of-type {
+        text-align: center;
+        padding-bottom: 131px;
+        h2 {
+          @extend .h2-section;
+        }
+
+        p {
+          font-family: Helvetica, 'Times New Roman', Times, serif;
+          font-size: 1.6rem;
+          letter-spacing: 3px;
+        }
+      }
+
+      &:last-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 303px;
+
+        > div img {
+          max-height: 229.49px;
+        }
+
+        .center-image {
+          margin-top: -75px;
+        }
+      }
+    }
+  }
+
+  /* PARTNERSHIP SECTION */
+  .partnership-section {
+    background-color: $bg-color-primary;
+    // height: 75vh;
+
+    article {
+      &:first-of-type {
+        margin: 0 25vw;
+        text-align: center;
+        h2 {
+          @extend .h2-section;
+        }
+
+        p {
+          font-weight: 100;
+          font-size: 1.6rem;
+          font-family: Helvetica, 'Times New Roman', Times, serif;
+          padding-bottom: 76px;
+        }
+      }
+
+      &:last-of-type {
+        font-weight: 100;
+        padding-bottom: 230px;
+        div {
+          overflow: hidden;
+          height: 50px;
+          width: 100%;
+          margin-bottom: 20px;
+
+          p {
+            font-size: 3.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  .showroom-section {
+    background-color: $bg-color-secondary;
+    height: 898.47px;
+
+    article {
+      padding-top: 20vh;
+
+      .section-wrapper {
+        margin: 0 10vw;
+        background: url('../imgs/Showroom-bg.jpg') no-repeat;
+        background-size: cover;
+        height: 582.98px;
+
+        display: flex;
+        justify-content: flex-end;
+
+        .showroom-text {
+          text-align: center;
+          padding-top: 100px;
+          margin-right: -115px;
+
+          h2 {
+            font-weight: 100;
+            font-size: 5.5rem;
+            letter-spacing: 50px;
+            padding-bottom: 47px;
+          }
+
+          p {
+            font-size: 1.6rem;
+            padding-bottom: 20px;
+            width: 35%;
+            margin: 0 60%;
+            &:last-of-type {
+              &::after {
+                @extend .arrow;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .news-section {
+    background-color: $bg-color-primary;
+    h2 {
+      @extend .h2-section;
+      text-align: center;
+    }
+
+    article {
+      &:first-of-type {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        > div img {
+          max-height: 189px;
+          width: 100%;
+        }
+
+        div {
+          width: 33%;
+          &:nth-child(2) {
+            align-items: flex-start;
+            h2 {
+              font-size: 3rem;
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      &:last-of-type {
+        text-align: center;
+        padding: 10px;
+
+        p {
+          font-size: 1.6rem;
+          &:first-of-type {
+            width: 50%;
+            margin: 0 auto;
+            font-weight: 100;
+            padding-bottom: 38px;
+          }
+
+          &:last-of-type {
+            &::after {
+              @extend .arrow;
+            }
+            padding-bottom: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .footer-section {
+    background-color: $bg-color-tertiary;
+    h2 {
+      text-align: center;
+      font-weight: 100;
+      color: $font-color-white;
+      font-size: 5rem;
+      letter-spacing: 50px;
+      padding-top: 50px;
+    }
+
+    article {
+      padding: 0 5vw 10vh 5vw;
+      display: flex;
+      justify-content: space-between;
+
+      .left-footer-text {
+        a {
+          color: $font-color-black;
+          text-decoration: none;
+          padding-right: 10px;
+        }
+      }
+
+      .right-footer-icons {
+        img {
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
