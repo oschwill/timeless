@@ -183,7 +183,7 @@ main {
           }
           &:nth-child(4) {
             p {
-              @include animation-slide-bar(moving-da-text, 31s, linear, infinite, reverse);
+              @include animation-slide-bar(moving-da-text, 31s, linear, infinite, normal);
             }
           }
         }
