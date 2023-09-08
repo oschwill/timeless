@@ -32,12 +32,29 @@ html {
   padding: 50px 0 38px 0;
 }
 
+.hover-da-button, main .showroom-section article .section-wrapper .showroom-text p:last-of-type, main .story-section article:last-of-type div p {
+  transition: 0.5s linear;
+  cursor: pointer;
+}
+.hover-da-button:hover, main .showroom-section article .section-wrapper .showroom-text p:hover:last-of-type, main .story-section article:last-of-type div p:hover {
+  transform: scaleX(1.25);
+}
+
+.hover-da-button-two, main .news-section article:last-of-type p:last-of-type {
+  transition: 0.5s linear;
+  cursor: pointer;
+}
+.hover-da-button-two:hover, main .news-section article:last-of-type p:hover:last-of-type {
+  letter-spacing: 5px;
+}
+
 body {
   color: #fff;
 }
 
 header .head-intro {
   background: url("../imgs/header-background.jpg") no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
   background-position: center;
@@ -85,10 +102,12 @@ main .story-section article:last-of-type div img {
   margin: 0 25vw;
 }
 main .story-section article:last-of-type div p {
+  width: 160px;
   font-family: Helvetica, "Times New Roman", Times, serif;
   font-size: 1.6rem;
   text-align: center;
   padding: 10px 0 204px 0;
+  margin: 0 auto;
 }
 main .handmade-jewels-section {
   background-color: #121212;
@@ -113,6 +132,36 @@ main .handmade-jewels-section article:last-of-type {
 }
 main .handmade-jewels-section article:last-of-type > div img {
   max-height: 229.49px;
+}
+main .handmade-jewels-section article:last-of-type div {
+  position: relative;
+}
+main .handmade-jewels-section article:last-of-type div:hover > .handmade-bg-slide {
+  visibility: visible;
+  height: 100%;
+}
+main .handmade-jewels-section article:last-of-type div .handmade-bg-slide {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  height: 0;
+  transition: 0.25s linear;
+}
+main .handmade-jewels-section article:last-of-type div .handmade-bg-slide p {
+  font-size: 2rem;
+  font-weight: 200;
+}
+main .handmade-jewels-section article:last-of-type div .handmade-bg-slide p:nth-child(2) {
+  border-bottom: 1px solid #fff;
+  width: 150px;
+  margin-bottom: 50px;
 }
 main .handmade-jewels-section article:last-of-type .center-image {
   margin-top: -75px;
@@ -141,7 +190,36 @@ main .partnership-section article:last-of-type div {
   margin-bottom: 20px;
 }
 main .partnership-section article:last-of-type div p {
+  white-space: nowrap;
   font-size: 3.9rem;
+}
+main .partnership-section article:last-of-type div:nth-child(1) p {
+  animation-name: moving-da-text;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+main .partnership-section article:last-of-type div:nth-child(2) p {
+  animation-name: moving-da-text;
+  animation-duration: 33s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+main .partnership-section article:last-of-type div:nth-child(3) p {
+  animation-name: moving-da-text;
+  animation-duration: 31s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+main .partnership-section article:last-of-type div:nth-child(4) p {
+  animation-name: moving-da-text;
+  animation-duration: 31s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
 }
 main .showroom-section {
   background-color: #121212;
@@ -188,10 +266,14 @@ main .news-section article:first-of-type {
   align-items: flex-end;
 }
 main .news-section article:first-of-type > div img {
-  max-height: 189px;
   width: 100%;
+  transition: 0.5s linear;
+}
+main .news-section article:first-of-type > div img:hover {
+  transform: scale(1.5);
 }
 main .news-section article:first-of-type div {
+  overflow: hidden;
   width: 33%;
 }
 main .news-section article:first-of-type div:nth-child(2) {
@@ -204,6 +286,7 @@ main .news-section article:first-of-type div:nth-child(2) h2 {
 main .news-section article:last-of-type {
   text-align: center;
   padding: 10px;
+  padding-bottom: 150px;
 }
 main .news-section article:last-of-type p {
   font-size: 1.6rem;
@@ -215,7 +298,7 @@ main .news-section article:last-of-type p:first-of-type {
   padding-bottom: 38px;
 }
 main .news-section article:last-of-type p:last-of-type {
-  padding-bottom: 150px;
+  display: inline-block;
 }
 footer .footer-section {
   background-color: #e2e2e2;
@@ -238,8 +321,20 @@ footer .footer-section article .left-footer-text a {
   text-decoration: none;
   padding-right: 10px;
 }
+footer .footer-section article .left-footer-text a:hover {
+  text-decoration: underline;
+}
 footer .footer-section article .right-footer-icons img {
   padding-left: 10px;
+}
+
+@keyframes moving-da-text {
+  from {
+    transform: translate(-550%);
+  }
+  to {
+    transform: translate(100%);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

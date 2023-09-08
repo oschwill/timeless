@@ -1,0 +1,7 @@
+@mixin animation-slide-bar($name, $duration, $function, $iteration, $direction) {
+  animation-name: $name;
+  animation-duration: $duration;
+  animation-timing-function: $function;
+  animation-iteration-count: $iteration;
+  animation-direction: $direction;
+}

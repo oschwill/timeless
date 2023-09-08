@@ -1,5 +1,15 @@
 @use './general.scss';
 @import './variables.scss';
 @import './extends.scss';
+@import './mixins.scss';
 @import './header.scss';
 @import './main.scss';
+
+@keyframes moving-da-text {
+  from {
+    transform: translate(-550%);
+  }
+  to {
+    transform: translate(100%);
+  }
+}

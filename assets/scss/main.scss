@@ -39,10 +39,14 @@ main {
           }
 
           p {
+            width: 160px;
             font-family: Helvetica, 'Times New Roman', Times, serif;
             font-size: 1.6rem;
             text-align: center;
             padding: 10px 0 204px 0;
+            margin: 0 auto;
+
+            @extend .hover-da-button;
 
             &::after {
               @extend .arrow;
@@ -84,6 +88,41 @@ main {
           max-height: 229.49px;
         }
 
+        div {
+          position: relative;
+
+          &:hover > .handmade-bg-slide {
+            visibility: visible;
+            height: 100%;
+          }
+
+          .handmade-bg-slide {
+            visibility: hidden;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+            bottom: 0;
+            height: 0;
+            transition: 0.25s linear;
+
+            p {
+              font-size: 2rem;
+              font-weight: 200;
+
+              &:nth-child(2) {
+                border-bottom: 1px solid $font-color-white;
+                width: 150px;
+                margin-bottom: 50px;
+              }
+            }
+          }
+        }
+
         .center-image {
           margin-top: -75px;
         }
@@ -122,7 +161,30 @@ main {
           margin-bottom: 20px;
 
           p {
+            white-space: nowrap;
             font-size: 3.9rem;
+          }
+
+          &:nth-child(1) {
+            p {
+              @include animation-slide-bar(moving-da-text, 30s, linear, infinite, normal);
+            }
+          }
+
+          &:nth-child(2) {
+            p {
+              @include animation-slide-bar(moving-da-text, 33s, linear, infinite, normal);
+            }
+          }
+          &:nth-child(3) {
+            p {
+              @include animation-slide-bar(moving-da-text, 31s, linear, infinite, reverse);
+            }
+          }
+          &:nth-child(4) {
+            p {
+              @include animation-slide-bar(moving-da-text, 31s, linear, infinite, reverse);
+            }
           }
         }
       }
@@ -163,6 +225,8 @@ main {
             width: 35%;
             margin: 0 60%;
             &:last-of-type {
+              @extend .hover-da-button;
+
               &::after {
                 @extend .arrow;
               }
@@ -188,11 +252,17 @@ main {
         align-items: flex-end;
 
         > div img {
-          max-height: 189px;
+          // max-height: 189px;
           width: 100%;
+          transition: 0.5s linear;
+
+          &:hover {
+            transform: scale(1.5);
+          }
         }
 
         div {
+          overflow: hidden;
           width: 33%;
           &:nth-child(2) {
             align-items: flex-start;
@@ -207,6 +277,7 @@ main {
       &:last-of-type {
         text-align: center;
         padding: 10px;
+        padding-bottom: 150px;
 
         p {
           font-size: 1.6rem;
@@ -218,10 +289,12 @@ main {
           }
 
           &:last-of-type {
+            display: inline-block;
+            @extend .hover-da-button-two;
+
             &::after {
               @extend .arrow;
             }
-            padding-bottom: 150px;
           }
         }
       }
@@ -251,6 +324,10 @@ footer {
           color: $font-color-black;
           text-decoration: none;
           padding-right: 10px;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
 
