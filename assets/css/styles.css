@@ -135,13 +135,14 @@ main .handmade-jewels-section article:last-of-type > div img {
 }
 main .handmade-jewels-section article:last-of-type div {
   position: relative;
+  overflow: hidden;
 }
 main .handmade-jewels-section article:last-of-type div:hover > .handmade-bg-slide {
   visibility: visible;
-  height: 100%;
+  transform: translateY(-100%);
 }
 main .handmade-jewels-section article:last-of-type div .handmade-bg-slide {
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -150,8 +151,7 @@ main .handmade-jewels-section article:last-of-type div .handmade-bg-slide {
   text-align: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  bottom: 0;
-  height: 0;
+  height: 100%;
   transition: 0.25s linear;
 }
 main .handmade-jewels-section article:last-of-type div .handmade-bg-slide p {
@@ -163,8 +163,19 @@ main .handmade-jewels-section article:last-of-type div .handmade-bg-slide p:nth-
   width: 150px;
   margin-bottom: 50px;
 }
-main .handmade-jewels-section article:last-of-type .center-image {
+main .handmade-jewels-section article:last-of-type .center-image-wrapper {
+  overflow: hidden;
+  height: 130px;
+}
+main .handmade-jewels-section article:last-of-type .center-image-wrapper .center-image {
   margin-top: -75px;
+}
+main .handmade-jewels-section article:last-of-type .center-image-wrapper .center-image:hover > .handmade-bg-slide {
+  visibility: visible;
+  transform: translateY(-135%);
+}
+main .handmade-jewels-section article:last-of-type .center-image-wrapper .center-image .handmade-bg-slide {
+  height: 50%;
 }
 main .partnership-section {
   background-color: #1a1a1a;
@@ -283,6 +294,9 @@ main .news-section article:first-of-type div:nth-child(2) h2 {
   font-size: 3rem;
   padding: 0;
 }
+main .news-section article:first-of-type div div {
+  width: 100%;
+}
 main .news-section article:last-of-type {
   text-align: center;
   padding: 10px;
@@ -325,7 +339,12 @@ footer .footer-section article .left-footer-text a:hover {
   text-decoration: underline;
 }
 footer .footer-section article .right-footer-icons img {
-  padding-left: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  padding-bottom: 1px;
+}
+footer .footer-section article .right-footer-icons img:hover {
+  border-bottom: 0.5px solid #000;
 }
 
 @keyframes moving-da-text {
